@@ -1,0 +1,79 @@
+.Card {
+    display:flex;
+    flex-direction: column;
+    width:200px;
+    height:150px;
+    padding: 2px;
+    margin: 1px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color:cornflowerblue;
+}
+
+.header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    float:left;
+    width:60px;
+    height:63px;
+    padding: 2px;        
+}
+
+.butDiv{
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+}
+
+.buttonCD {
+    width: 26px;
+    border-radius: 5px;
+    height: 22px;
+    border: 3px solid black;
+    padding: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+}
+
+.link {
+    margin:0px;
+    padding: 0px 5px 0px 20px; 
+    font-size: 15px;
+    font-weight: 500;
+    margin-left:0px;   
+}
+
+.various {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 5px;
+    font-weight: 500;
+    margin:0px;
+    padding:20px 2px 0px 2px;
+}
+
+button {
+    display:flex;
+    margin-left: 180px;
+    width:15px;;
+
+}
+
+
+
+
+

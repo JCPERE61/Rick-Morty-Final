@@ -1,0 +1,6 @@
+.allCards {
+    display: flex;
+    justify-content: space-around;
+    padding:25px;
+    flex-wrap: wrap;
+}
