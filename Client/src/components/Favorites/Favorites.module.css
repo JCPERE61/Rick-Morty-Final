@@ -1,14 +1,17 @@
 .selectors {
     display: flex;
     justify-content: center;
-    padding-left:10px;
-    padding-bottom:10px;
+    padding:10px;
     background-color: blanchedalmond;
 }
 
 .order {
-    padding-left: 15px;
-    padding-top: 10px;
+    padding: 10px 10px 10px 15px;
+}
+
+.filter {
+    padding: 10px 15px 10px 10px;
+    
 }
 
 .boton {

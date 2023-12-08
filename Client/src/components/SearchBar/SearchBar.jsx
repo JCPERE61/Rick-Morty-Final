@@ -2,6 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './SearchBar.module.css';
 
+import {info} from '../../assets/langInfo';
+
+let i=0;
+
 export default function SearchBar({onSearch}) {
 
    const [id,setId] = useState('');
@@ -18,7 +22,7 @@ export default function SearchBar({onSearch}) {
         <button className={styles.buttonSB} onClick={()=>{
          onSearch(id)
          setInpId('')}
-         }>Agregar</button>
+         }>{info.routNam.addChar[i]}</button>
        </div>
     );
  }

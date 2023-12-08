@@ -3,6 +3,9 @@ import { useState } from "react";
 import validation from "../../validation";
 import styles from './Form.module.css';
 
+import {info} from '../../assets/langInfo';
+
+let i=0;
 
 export default function Form({login}) {
 
@@ -33,24 +36,19 @@ export default function Form({login}) {
         login(userData);
      }
 
-    const handleReg = (event) => {
-        event.preventDefault();
-        login(regUserData);
-     }
-
     return(
         <form className={styles.forms}>
             <div className={styles.titulo}>
-                <h1>Rick and Morty Form</h1>    
+                <h1>{info.forms.title[i]}</h1>    
             </div>
             
             <div className={styles.container1}>
             
                 <div className={styles.container2}>
-                    <h6>User Logging</h6>
+                    <h6>{info.forms.login[i]}</h6>
                     <div className={styles.label}>
                         <img src="./images/rick_1.png" alt="" className={styles.imgsize}/>
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">{info.forms.email[i]}</label>
                         <input
                             type="text" 
                             name="email" 
@@ -60,7 +58,7 @@ export default function Form({login}) {
                     </div>
 
                     <div className={styles.label}> 
-                        <label htmlFor="password">Password:</label>
+                        <label htmlFor="password">{info.forms.password[i]}</label>
                         <input
                         type="password" 
                         name="password" 
