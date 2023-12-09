@@ -3,11 +3,9 @@ import styles from './About.module.css';
 
 import {info} from '../../assets/langInfo';
 
-function About() {
+function About({i}) {
 
-  let i=0;
-
-    return (
+   return (
 
     <section className={styles.content}>
 

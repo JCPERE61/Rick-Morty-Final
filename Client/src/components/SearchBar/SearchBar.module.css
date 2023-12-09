@@ -1,26 +1,29 @@
-.searchDiv {
+.container {
+    width:100px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 2px;
-    padding:2px;
-    align-items: center;
+    flex-direction: row;
+    padding:0px;
+    margin:0px;
 
-    button {
-        border:2px solid black;
-        border-radius: 6px;
-        height: 24px;
-        width: 63px;
-     }
-     
-     button:hover {
-         background-color: blueviolet;
-     }
-  
 }
-
 .input{
     height:30px;
     border-radius: 10px;
+    width:140px;
 }
 
+.buttonSB {
+    border:2px solid black;
+    border-radius: 6px;
+    height: 30px;
+    width: 70px;
+    margin:0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+
+    button:hover {
+        background-color: blueviolet;
+    }
+ }
 

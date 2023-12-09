@@ -4,9 +4,7 @@ import styles from './SearchBar.module.css';
 
 import {info} from '../../assets/langInfo';
 
-let i=0;
-
-export default function SearchBar({onSearch}) {
+export default function SearchBar({i,onSearch}) {
 
    const [id,setId] = useState('');
    const[inpId,setInpId] = useState('');
@@ -17,7 +15,7 @@ export default function SearchBar({onSearch}) {
    }
 
    return (
-      <div className={styles.searchDiv}>
+      <div className={styles.container}>
         <input onChange={handleChange} placeholder='id' className={styles.input} type='search' value={inpId}/>
         <button className={styles.buttonSB} onClick={()=>{
          onSearch(id)

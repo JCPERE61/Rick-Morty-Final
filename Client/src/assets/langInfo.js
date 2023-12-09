@@ -14,22 +14,45 @@ export const info = {
       designer3:["Decided to explore Internet related topics and re-route his career, applied to SOY HENRY to become a Full Stack Programmer, mainly for Backend.","Decidió explorar temas relacionados con Internet y redirigir su carrera, solicitó ingresar a SOY HENRY para convertirse en un programador Full Stack, principalmente para el Backend."]
     },
     forms: {
-      title: ['Rick and Morty Form','Formulario de Rick and Morty'],
+      title: ['----- Rick and Morty Form -----','- Formulario de Rick and Morty -'],
+      title2:['--- (Start with user henry@gmail.com and Henry2023) --- ','-- (Empiece con usuario henry@gmail.com y Henry2023) --'],
       login: ['User Logging','Ingreso de Usuario'],
-      email:['Email:','Correo Electrónico:'],
+      email:['User:','Usuario:'],
       password: ['Password:','Clave:'],
-      errores:[{
-        email:[],
-        password:[]
-      }]
-
+      submit:['Submit','Enviar']
     },
+    mailErrors:{      
+        empty:["Email must not be empty","Correo Electrónico no puede estar vacío"],
+        type:["Must be an email","Debe ser un correo electrónico"],
+        length:["Email must be maximum 35 characters long","El Correo Electrónico no puede tener mas de 35 caracteres"]
+    },
+    passErrors:{
+        empty:["Password must not be empty","La Contraseña no puede estar en blanco"],
+        number:["Password must have at least one number","La contraseña tiene que tener al menos un número"],
+        size:["Password must be between 6 and 10 characters long","La contraseña debe tener una longitud entre 6 y 10 caracteres"]
+    }, 
     routNam:{
       about:['About','Acerca de'],
       home:['Characters','Personajes'],
       favorites:['Favorites','Favoritos'],
       logout:['Logout','Salida'],
       addChar:['Add','Agregar']
+    },
+    detail:{
+      title:["Character's detail","Detalle del Personaje"],
+      statUk:['Character could be alive or dead, but nobody knows', 'Personaje puede estar vivo o muerto. Nadie sabe'],
+      statAli:['Character is Alive','Personaje está vivo'],
+      statDead:['Character is Dead','Personaje está muerto'],
+      specHuman:['Belongs to Human specie','Pertenece a la raza humana'],
+      specAlien:['It is an Alien','Es un alienígena'],
+      specRob:['It is a Robot','Es un Robot'],
+      genUk:['Character could be Male, Female or Genderless, but nobody knows','Personaje puede ser masculino, femenino o asexuado pero nadie sabe'],
+      genMale:["Gender: Male","Género: Masculino"],
+      genFem:["Gender: Female","Género: Femenino"],
+      genLess:["Character does not have a defined gender","Personaje asexuado"],
+      origin:['Comes froma place called','Viene de un lugar llamado'],
+      location1:['At this time ','Actuálmente '],
+      location2:[' live(s) in ',' vive(n) en ']
     }
     
   }

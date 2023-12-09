@@ -5,27 +5,31 @@ import styles from './Nav.module.css';
 
 import {info} from '../../assets/langInfo';
 
-let i=0;
-
  
-export default function Nav({onSearch,logout}) {
+export default function Nav({i,onSearch,logout}) {
     return (
         <div className={styles.divBar}>
-            <div className={styles.divLeft}>
-            <button className={styles.buttonNav}>
-                <Link to={'/about'}>{info.routNam.about[i]}</Link>
-            </button>
-            <button className={styles.buttonNav}>
-                <Link to={'/home'}>{info.routNam.home[i]}</Link>
-            </button>            
-            <button className={styles.buttonNav}>
-                <Link to={'/favorites'}>{info.routNam.favorites[i]}</Link>
-            </button>
-            <button className={styles.buttonNav} onClick={logout}>{info.routNam.logout[i]}</button>
 
-            </div>
+            <div className={styles.divLeft}>
+                <button className={styles.buttonLNav}>
+                    <Link to={'/about'}>{info.routNam.about[i]}</Link>
+                </button>
+                <button className={styles.buttonNav}>
+                    <Link to={'/home'}>{info.routNam.home[i]}</Link>
+                </button>            
+                <button className={styles.buttonNav}>
+                    <Link to={'/favorites'}>{info.routNam.favorites[i]}</Link>
+                </button>
+                <button className={styles.buttonRNav}>
+                    <Link to={'/'}>{info.routNam.logout[i]}</Link>
+                </button>
+
+        </div>
             
-            <SearchBar onSearch={onSearch} />
+        <div className={styles.searchDiv}>
+            <SearchBar i={i} onSearch={onSearch} />
+        </div>           
+            
         </div>        
     )  
     

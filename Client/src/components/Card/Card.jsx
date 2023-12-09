@@ -45,10 +45,8 @@ export default function Card({id, name, status, species, gender, origin, image, 
             </div> 
          </div>        
                  
-         <Link className={styles.link} to={`/detail/${id}`} >{name}</Link>
-            <div className={styles.various}>
-               {gender !== "unknown" ? <h3>{gender} identified as {species} </h3>:<h3>{species} with unknown gender</h3>}
-            </div>                
+         <Link className={styles.link} to={`/detail/${id}`} >{name} ({id}) </Link>
+                         
          
       </div>
 

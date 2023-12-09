@@ -10,22 +10,57 @@
 }
 
 .divLeft {
-    width:1109px;
+    width:975px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;  
-    padding-right: 50px;
+    padding-right: 34px;
 }
 
-button {
+.buttonLNav {
     width: 85px;
     border-radius: 8px;
     height: 30px;
     border: 3px solid black;
-    padding: 5px;
+    margin: 4px 0px 4px 10px;
+    padding: 5px 10px 5px 5px;
     font-weight: 500;
     cursor: pointer;
     transition: border-color 0.25s;
 
+}
+.buttonNav {
+    width: 85px;
+    border-radius: 8px;
+    height: 30px;
+    border: 3px solid black;
+    margin: 4px 0px 4px 0px;
+    padding: 5px 5px 5px 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+}
+
+.buttonRNav {
+    width: 85px;
+    border-radius: 8px;
+    height: 30px;
+    border: 3px solid black;
+    padding: 5px 5px 5px 10px;
+    margin: 4px 10px 4px 0px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+}
+
+.searchDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2px;
+    padding:2px;
+    align-items: center;
+    width: 200px;
 }
 

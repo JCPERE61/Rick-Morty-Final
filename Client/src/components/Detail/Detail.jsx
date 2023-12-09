@@ -3,7 +3,12 @@ import { useParams } from "react-router-dom";
 import React,{ useState, useEffect } from "react";
 import styles from './Detail.module.css';
 
-export default function Detail() {
+import {info} from '../../assets/langInfo';
+
+
+export default function Detail({i}) {
+
+   
 
     const [character, setCharacter] = useState({});
     const [loading, setLoading] = useState(true);
@@ -28,20 +33,32 @@ export default function Detail() {
 
       <h1>Loading...</h1>) : (
 
-         <div>
-            <h1>Character's detail</h1>
+         <div className={styles.container}>
+            <h1 className={styles.titulo}>{info.detail.title[i]}</h1>
             <div className={styles.Card}>
                <div>               
                 <img className={styles.imageChar} src={image} alt='' /> 
-                <h1>{name}</h1>
+                {i === 0 ? <h2 className={styles.fontDecor}>{name} with id# {id}</h2>:<h2 className={styles.fontDecor}>{name} con identificación No. {id}</h2>}
                </div>
                <div className={styles.others}>
-               {status !== "unknown" ?<h2>Status: {status}</h2>:<h2 className={styles.strange}>Character could be alive or dead, but nobody knows</h2>}
-                <h2>Specie: {species}</h2>
-                {gender !== "unknown" ? <h2> Gender: {gender}</h2>:<h2 className={styles.strange}>Character could be Male, Female or with no gender, but nobody knows</h2>}
-                {origin.name && origin.name !== "unknown" && 
-                ( <h2>Character comes from "{origin.name}". At this time, is living in "{location.name}"</h2> )}
-                <h2>Some Episodes: </h2>
+
+               {status === "unknown" && <h2 className={styles.strange}>{info.detail.statUk[i]}</h2>}
+               {status === "Alive" && <h2 className={styles.normal}>{info.detail.statAli[i]}</h2>}
+               {status === "Dead" && <h2 className={styles.normal}>{info.detail.statDead[i]}</h2>}                    
+               
+               {species === "Human" && <h2 className={styles.normal}>{info.detail.specHuman[i]}</h2>}
+               {species === "Alien" && <h2 className={styles.normal}>{info.detail.specAlien[i]}</h2>}
+               {species === "Robot" && <h2 className={styles.normal}>{info.detail.specRob[i]}</h2>}         
+
+                {gender === "unknown" && <h2 className={styles.strange}>{info.detail.genUk[i]}</h2>}
+                {gender === "Male" && <h2 className={styles.normal}>{info.detail.genMale[i]}</h2>}
+                {gender === "Female" && <h2 className={styles.normal}>{info.detail.genFem[i]}</h2>}
+                {gender === "Genderless" && <h2 className={styles.strange}>{info.detail.genLess[i]}</h2>}
+
+               {origin.name && origin.name !== "unknown" && 
+                (<h2 className={styles.normal}>{info.detail.origin[i]} "{origin.name}".</h2>)}
+                <h2 className={styles.normal}>{info.detail.location1[i]}"{name}"{info.detail.location2[i]}"{location.name}"</h2> 
+                
 
                </div> 
         </div> 

@@ -2,10 +2,15 @@ import React from 'react';
 import Card from '../Card/Card';
 import styles from './Cards.module.css';
 
-export default function Cards({characters,onClose}) {
+export default function Cards({i,characters,onClose}) {
 
     return (
+   <>
+   <div className={styles.various}>
+               {i===0 ? <p>Please click on underlined name to see more character details</p>:<p>Favor haga "click" en el nombre subrayado para mas detalles del personaje</p>}
+      </div> 
    <div className={styles.allCards}>
+        
       {characters.map (({id, name, status, species, gender, origin, image}) => {
          return (
             <Card 
@@ -22,5 +27,6 @@ export default function Cards({characters,onClose}) {
             )
       }
       )}
-   </div>);
+   </div>
+   </>);
 }

@@ -4,7 +4,7 @@ import { filterCards, orderCards } from "../../redux/actions";
 import Cards from "../Cards/Cards";
 import styles from './Favorites.module.css';
 
-const Favorites = ({onClose}) => {
+const Favorites = ({i}) => {
 
     const myFavorites = useSelector ((state) => state.myFavorites);
     const dispatch = useDispatch();
@@ -17,16 +17,7 @@ const Favorites = ({onClose}) => {
     const handlerFilter = (event) => {
         const filter = event.target.value;
         dispatch(filterCards(filter))
-    }
-
- /*    const showFavorites = () => {
-     console.log (myFavorites);
-        return (
-            
-        )   
-    
-    } */
-    
+    }    
 
 return (
     <>
@@ -50,15 +41,8 @@ return (
         </div>
         </div> 
 
-        <Cards characters={myFavorites}/>           
-
-        
-
-        
-
-    
-
-        
+        <Cards i={i} characters={myFavorites}/>           
+   
     </>)
 }
 

@@ -15,16 +15,16 @@ const login = async (req,res) => {
             })
 
         if(!user){
-                return res.status(404).json({message:"Usuario no encontrado"});
+                return res.status(404).json({error:{message:"Usuario no encontrado"}});
             }
 
                 return user.password === password ?
                     res.status(200).json({access: true})
-                    : res.status(403).json({message:"Contraseña incorrecta"})
+                    : res.status(403).json({error:{message:"Contraseña incorrecta"}})
                 
             }
             catch (error){
-                return res.status(500).json({error:error.message})
+                console.log({error})
             }        
              
         }
